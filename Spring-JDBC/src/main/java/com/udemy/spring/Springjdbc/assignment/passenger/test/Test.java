@@ -12,12 +12,12 @@ public class Test {
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/udemy/spring/Springjdbc/assignment/passenger/test/config.xml");
 		PassengerDao passengerDao = (PassengerDao) context.getBean("passengerDao");
 		Passenger passenger = new Passenger();
-		passenger.setPId(112);
+		passenger.setPId(116);
 		passenger.setFirstName("test");
 		passenger.setLastName("google");
 		
 		Employee employee = new Employee();
-		employee.setId(111);
+		employee.setId(117);
 		employee.setName("vvn");
 		
 		int genId = passengerDao.create(passenger,employee);
