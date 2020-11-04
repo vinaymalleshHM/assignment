@@ -13,8 +13,8 @@ public class PassengerRowMapper implements RowMapper<Passenger> {
 	public Passenger mapRow(ResultSet rs, int rowNum) throws SQLException {
 		Passenger passenger = new Passenger();
 		passenger.setPId(rs.getInt(1));
-		passenger.setFirstName(rs.getString(2));
-		passenger.setLastName(rs.getString(3));
+//		passenger.setFirstName(rs.getString(2));
+//		passenger.setLastName(rs.getString(3));
 		return passenger;
 	}
 

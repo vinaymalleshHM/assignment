@@ -12,21 +12,21 @@ public class Test {
 		ApplicationContext context = new ClassPathXmlApplicationContext("com/udemy/spring/Springjdbc/assignment/passenger/test/config.xml");
 		PassengerDao passengerDao = (PassengerDao) context.getBean("passengerDao");
 		Passenger passenger = new Passenger();
-		passenger.setPId(116);
+		passenger.setPId(3);
 		passenger.setFirstName("test");
 		passenger.setLastName("google");
 		
 		Employee employee = new Employee();
-		employee.setId(117);
+		employee.setId(5);
 		employee.setName("vvn");
 		
 		int genId = passengerDao.create(passenger,employee);
 		
-		System.out.println("the returned id :"+genId);
 		
 		if (genId >= passenger.getPId() ) {
 			
 			System.out.println("record inserted ");
+			System.out.println("the returned id :"+genId);
 		}
 				
 		else {
